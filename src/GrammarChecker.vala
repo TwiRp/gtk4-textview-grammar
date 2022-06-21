@@ -73,8 +73,8 @@ namespace TwiRpin {
         public GrammarChecker () {
             checking = Mutex ();
 
-            // Default to allow scanning every 2 seconds
-            limit_updates = new TimedMutex (2000);
+            // Default to allow scanning every 1/4 seconds
+            limit_updates = new TimedMutex (250);
             grammar_line = null;
             grammar_word = null;
             last_cursor = -1;
