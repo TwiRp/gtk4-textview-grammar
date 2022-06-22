@@ -585,8 +585,12 @@ namespace TwiRpin {
                     avg_w = (int)((hashtag_w + space_w) / 2.0);
                 }
                 debug ("%s Hashtag: %d, Space: %d, AvgChar: %d", font_desc.get_family (), hashtag_w, space_w, avg_w);
-                view.left_margin = ((hashtag_w * 10) + space_w);
-                view.right_margin = ((hashtag_w * 10) + space_w);
+                if (view.left_margin <  ((hashtag_w * 10) + space_w)) {
+                    view.left_margin = ((hashtag_w * 10) + space_w);
+                }
+                if (view.right_margin <  ((hashtag_w * 10) + space_w)) {
+                    view.right_margin = ((hashtag_w * 10) + space_w);
+                }
                 m = view.left_margin;
                 if (m - ((hashtag_w * 6) + space_w) <= 0) {
                     heading_text[0].left_margin = m;
