@@ -11,7 +11,7 @@ if linkgrammar.found() == false
     linkgrammar = cc.find_library('link-grammar', required: true)
 endif
 
-# Define out dependencies
+# Define our dependencies
 example_deps = [ dependency('gtk4'), dependency('gtksourceview-5'), dependency('gee-0.8'), linkgrammar ]
 
 # Tell the compiler where our custom Vala Bindings are
