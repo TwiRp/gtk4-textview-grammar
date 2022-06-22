@@ -425,7 +425,8 @@ namespace TwiRpin {
 
         private void tag_sentence (Gtk.TextIter check_start, Gtk.TextIter check_end, Gee.List<string> problem_words) {
             while (check_start.get_char () == ' ' || check_start.get_char () == '#' ||
-                    check_start.get_char () == '-' || check_start.get_char () == '*')
+                    check_start.get_char () == '-' || check_start.get_char () == '*' ||
+                    check_start.get_char () == '>')
             {
                 if (!check_start.forward_char ()) {
                     break;
